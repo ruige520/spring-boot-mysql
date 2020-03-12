@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pangu.foying.web.project.back.mapper.BaseNavigationMapper">
+  <resultMap id="BaseResultMap" type="com.pangu.foying.web.project.back.entity.BaseNavigation">
+    <constructor>
+      <idArg column="ID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="MainID" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="ParentID" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="NavigationType" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="NavigationName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="Title" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="SubTitle" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="IconUrl" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="LinkUrl" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="IsLock" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="ActionType" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="IsSYS" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="AddTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="AddUserID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="AddUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ModifyTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="ModifyUserID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ModifyName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="DeleteMark" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="DeleteTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="DeleteName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="Remark" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="SortCode" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    </constructor>
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ID, MainID, ParentID, NavigationType, NavigationName, Title, SubTitle, IconUrl, LinkUrl, 
+    IsLock, ActionType, IsSYS, AddTime, AddUserID, AddUserName, ModifyTime, ModifyUserID, 
+    ModifyName, DeleteMark, DeleteTime, DeleteName, Remark, SortCode
+  </sql>
+  <select id="selectByExample" parameterType="com.pangu.foying.web.project.back.entity.BaseNavigationExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from base_navigation
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from base_navigation
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from base_navigation
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.pangu.foying.web.project.back.entity.BaseNavigationExample">
+    delete from base_navigation
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.pangu.foying.web.project.back.entity.BaseNavigation">
+    insert into base_navigation (ID, MainID, ParentID, 
+      NavigationType, NavigationName, Title, 
+      SubTitle, IconUrl, LinkUrl, 
+      IsLock, ActionType, IsSYS, 
+      AddTime, AddUserID, AddUserName, 
+      ModifyTime, ModifyUserID, ModifyName, 
+      DeleteMark, DeleteTime, DeleteName, 
+      Remark, SortCode)
+    values (#{id,jdbcType=VARCHAR}, #{mainId,jdbcType=INTEGER}, #{parentId,jdbcType=INTEGER}, 
+      #{navigationType,jdbcType=VARCHAR}, #{navigationName,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
+      #{subTitle,jdbcType=VARCHAR}, #{iconUrl,jdbcType=VARCHAR}, #{linkUrl,jdbcType=VARCHAR}, 
+      #{isLock,jdbcType=BIT}, #{actionType,jdbcType=VARCHAR}, #{isSys,jdbcType=BIT}, 
+      #{addTime,jdbcType=TIMESTAMP}, #{addUserId,jdbcType=VARCHAR}, #{addUserName,jdbcType=VARCHAR}, 
+      #{modifyTime,jdbcType=TIMESTAMP}, #{modifyUserId,jdbcType=VARCHAR}, #{modifyName,jdbcType=VARCHAR}, 
+      #{deleteMark,jdbcType=BIT}, #{deleteTime,jdbcType=TIMESTAMP}, #{deleteName,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{sortCode,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pangu.foying.web.project.back.entity.BaseNavigation">
+    insert into base_navigation
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="mainId != null">
+        MainID,
+      </if>
+      <if test="parentId != null">
+        ParentID,
+      </if>
+      <if test="navigationType != null">
+        NavigationType,
+      </if>
+      <if test="navigationName != null">
+        NavigationName,
+      </if>
+      <if test="title != null">
+        Title,
+      </if>
+      <if test="subTitle != null">
+        SubTitle,
+      </if>
+      <if test="iconUrl != null">
+        IconUrl,
+      </if>
+      <if test="linkUrl != null">
+        LinkUrl,
+      </if>
+      <if test="isLock != null">
+        IsLock,
+      </if>
+      <if test="actionType != null">
+        ActionType,
+      </if>
+      <if test="isSys != null">
+        IsSYS,
+      </if>
+      <if test="addTime != null">
+        AddTime,
+      </if>
+      <if test="addUserId != null">
+        AddUserID,
+      </if>
+      <if test="addUserName != null">
+        AddUserName,
+      </if>
+      <if test="modifyTime != null">
+        ModifyTime,
+      </if>
+      <if test="modifyUserId != null">
+        ModifyUserID,
+      </if>
+      <if test="modifyName != null">
+        ModifyName,
+      </if>
+      <if test="deleteMark != null">
+        DeleteMark,
+      </if>
+      <if test="deleteTime != null">
+        DeleteTime,
+      </if>
+      <if test="deleteName != null">
+        DeleteName,
+      </if>
+      <if test="remark != null">
+        Remark,
+      </if>
+      <if test="sortCode != null">
+        SortCode,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="mainId != null">
+        #{mainId,jdbcType=INTEGER},
+      </if>
+      <if test="parentId != null">
+        #{parentId,jdbcType=INTEGER},
+      </if>
+      <if test="navigationType != null">
+        #{navigationType,jdbcType=VARCHAR},
+      </if>
+      <if test="navigationName != null">
+        #{navigationName,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="subTitle != null">
+        #{subTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="iconUrl != null">
+        #{iconUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="linkUrl != null">
+        #{linkUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="isLock != null">
+        #{isLock,jdbcType=BIT},
+      </if>
+      <if test="actionType != null">
+        #{actionType,jdbcType=VARCHAR},
+      </if>
+      <if test="isSys != null">
+        #{isSys,jdbcType=BIT},
+      </if>
+      <if test="addTime != null">
+        #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addUserId != null">
+        #{addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="addUserName != null">
+        #{addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyTime != null">
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUserId != null">
+        #{modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyName != null">
+        #{modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteMark != null">
+        #{deleteMark,jdbcType=BIT},
+      </if>
+      <if test="deleteTime != null">
+        #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleteName != null">
+        #{deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="sortCode != null">
+        #{sortCode,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.pangu.foying.web.project.back.entity.BaseNavigationExample" resultType="java.lang.Integer">
+    select count(*) from base_navigation
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update base_navigation
+    <set>
+      <if test="record.id != null">
+        ID = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mainId != null">
+        MainID = #{record.mainId,jdbcType=INTEGER},
+      </if>
+      <if test="record.parentId != null">
+        ParentID = #{record.parentId,jdbcType=INTEGER},
+      </if>
+      <if test="record.navigationType != null">
+        NavigationType = #{record.navigationType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.navigationName != null">
+        NavigationName = #{record.navigationName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.title != null">
+        Title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.subTitle != null">
+        SubTitle = #{record.subTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.iconUrl != null">
+        IconUrl = #{record.iconUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.linkUrl != null">
+        LinkUrl = #{record.linkUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isLock != null">
+        IsLock = #{record.isLock,jdbcType=BIT},
+      </if>
+      <if test="record.actionType != null">
+        ActionType = #{record.actionType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isSys != null">
+        IsSYS = #{record.isSys,jdbcType=BIT},
+      </if>
+      <if test="record.addTime != null">
+        AddTime = #{record.addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.addUserId != null">
+        AddUserID = #{record.addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.addUserName != null">
+        AddUserName = #{record.addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifyTime != null">
+        ModifyTime = #{record.modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.modifyUserId != null">
+        ModifyUserID = #{record.modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifyName != null">
+        ModifyName = #{record.modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.deleteMark != null">
+        DeleteMark = #{record.deleteMark,jdbcType=BIT},
+      </if>
+      <if test="record.deleteTime != null">
+        DeleteTime = #{record.deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.deleteName != null">
+        DeleteName = #{record.deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        Remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sortCode != null">
+        SortCode = #{record.sortCode,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update base_navigation
+    set ID = #{record.id,jdbcType=VARCHAR},
+      MainID = #{record.mainId,jdbcType=INTEGER},
+      ParentID = #{record.parentId,jdbcType=INTEGER},
+      NavigationType = #{record.navigationType,jdbcType=VARCHAR},
+      NavigationName = #{record.navigationName,jdbcType=VARCHAR},
+      Title = #{record.title,jdbcType=VARCHAR},
+      SubTitle = #{record.subTitle,jdbcType=VARCHAR},
+      IconUrl = #{record.iconUrl,jdbcType=VARCHAR},
+      LinkUrl = #{record.linkUrl,jdbcType=VARCHAR},
+      IsLock = #{record.isLock,jdbcType=BIT},
+      ActionType = #{record.actionType,jdbcType=VARCHAR},
+      IsSYS = #{record.isSys,jdbcType=BIT},
+      AddTime = #{record.addTime,jdbcType=TIMESTAMP},
+      AddUserID = #{record.addUserId,jdbcType=VARCHAR},
+      AddUserName = #{record.addUserName,jdbcType=VARCHAR},
+      ModifyTime = #{record.modifyTime,jdbcType=TIMESTAMP},
+      ModifyUserID = #{record.modifyUserId,jdbcType=VARCHAR},
+      ModifyName = #{record.modifyName,jdbcType=VARCHAR},
+      DeleteMark = #{record.deleteMark,jdbcType=BIT},
+      DeleteTime = #{record.deleteTime,jdbcType=TIMESTAMP},
+      DeleteName = #{record.deleteName,jdbcType=VARCHAR},
+      Remark = #{record.remark,jdbcType=VARCHAR},
+      SortCode = #{record.sortCode,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pangu.foying.web.project.back.entity.BaseNavigation">
+    update base_navigation
+    <set>
+      <if test="mainId != null">
+        MainID = #{mainId,jdbcType=INTEGER},
+      </if>
+      <if test="parentId != null">
+        ParentID = #{parentId,jdbcType=INTEGER},
+      </if>
+      <if test="navigationType != null">
+        NavigationType = #{navigationType,jdbcType=VARCHAR},
+      </if>
+      <if test="navigationName != null">
+        NavigationName = #{navigationName,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        Title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="subTitle != null">
+        SubTitle = #{subTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="iconUrl != null">
+        IconUrl = #{iconUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="linkUrl != null">
+        LinkUrl = #{linkUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="isLock != null">
+        IsLock = #{isLock,jdbcType=BIT},
+      </if>
+      <if test="actionType != null">
+        ActionType = #{actionType,jdbcType=VARCHAR},
+      </if>
+      <if test="isSys != null">
+        IsSYS = #{isSys,jdbcType=BIT},
+      </if>
+      <if test="addTime != null">
+        AddTime = #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addUserId != null">
+        AddUserID = #{addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="addUserName != null">
+        AddUserName = #{addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyTime != null">
+        ModifyTime = #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUserId != null">
+        ModifyUserID = #{modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyName != null">
+        ModifyName = #{modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteMark != null">
+        DeleteMark = #{deleteMark,jdbcType=BIT},
+      </if>
+      <if test="deleteTime != null">
+        DeleteTime = #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleteName != null">
+        DeleteName = #{deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        Remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="sortCode != null">
+        SortCode = #{sortCode,jdbcType=INTEGER},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pangu.foying.web.project.back.entity.BaseNavigation">
+    update base_navigation
+    set MainID = #{mainId,jdbcType=INTEGER},
+      ParentID = #{parentId,jdbcType=INTEGER},
+      NavigationType = #{navigationType,jdbcType=VARCHAR},
+      NavigationName = #{navigationName,jdbcType=VARCHAR},
+      Title = #{title,jdbcType=VARCHAR},
+      SubTitle = #{subTitle,jdbcType=VARCHAR},
+      IconUrl = #{iconUrl,jdbcType=VARCHAR},
+      LinkUrl = #{linkUrl,jdbcType=VARCHAR},
+      IsLock = #{isLock,jdbcType=BIT},
+      ActionType = #{actionType,jdbcType=VARCHAR},
+      IsSYS = #{isSys,jdbcType=BIT},
+      AddTime = #{addTime,jdbcType=TIMESTAMP},
+      AddUserID = #{addUserId,jdbcType=VARCHAR},
+      AddUserName = #{addUserName,jdbcType=VARCHAR},
+      ModifyTime = #{modifyTime,jdbcType=TIMESTAMP},
+      ModifyUserID = #{modifyUserId,jdbcType=VARCHAR},
+      ModifyName = #{modifyName,jdbcType=VARCHAR},
+      DeleteMark = #{deleteMark,jdbcType=BIT},
+      DeleteTime = #{deleteTime,jdbcType=TIMESTAMP},
+      DeleteName = #{deleteName,jdbcType=VARCHAR},
+      Remark = #{remark,jdbcType=VARCHAR},
+      SortCode = #{sortCode,jdbcType=INTEGER}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.pangu.foying.web.project.back.entity.BaseNavigation">
+    <constructor>
+      <idArg column="ID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="MainID" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="ParentID" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="NavigationType" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="NavigationName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="Title" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="SubTitle" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="IconUrl" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="LinkUrl" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="IsLock" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="ActionType" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="IsSYS" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="AddTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="AddUserID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="AddUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ModifyTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="ModifyUserID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ModifyName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="DeleteMark" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="DeleteTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="DeleteName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="Remark" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="SortCode" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    </constructor>
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ID, MainID, ParentID, NavigationType, NavigationName, Title, SubTitle, IconUrl, LinkUrl, 
+    IsLock, ActionType, IsSYS, AddTime, AddUserID, AddUserName, ModifyTime, ModifyUserID, 
+    ModifyName, DeleteMark, DeleteTime, DeleteName, Remark, SortCode
+  </sql>
+  <select id="selectByExample" parameterType="com.pangu.foying.web.project.back.entity.BaseNavigationExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from base_navigation
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from base_navigation
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from base_navigation
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.pangu.foying.web.project.back.entity.BaseNavigationExample">
+    delete from base_navigation
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.pangu.foying.web.project.back.entity.BaseNavigation">
+    insert into base_navigation (ID, MainID, ParentID, 
+      NavigationType, NavigationName, Title, 
+      SubTitle, IconUrl, LinkUrl, 
+      IsLock, ActionType, IsSYS, 
+      AddTime, AddUserID, AddUserName, 
+      ModifyTime, ModifyUserID, ModifyName, 
+      DeleteMark, DeleteTime, DeleteName, 
+      Remark, SortCode)
+    values (#{id,jdbcType=VARCHAR}, #{mainId,jdbcType=INTEGER}, #{parentId,jdbcType=INTEGER}, 
+      #{navigationType,jdbcType=VARCHAR}, #{navigationName,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
+      #{subTitle,jdbcType=VARCHAR}, #{iconUrl,jdbcType=VARCHAR}, #{linkUrl,jdbcType=VARCHAR}, 
+      #{isLock,jdbcType=BIT}, #{actionType,jdbcType=VARCHAR}, #{isSys,jdbcType=BIT}, 
+      #{addTime,jdbcType=TIMESTAMP}, #{addUserId,jdbcType=VARCHAR}, #{addUserName,jdbcType=VARCHAR}, 
+      #{modifyTime,jdbcType=TIMESTAMP}, #{modifyUserId,jdbcType=VARCHAR}, #{modifyName,jdbcType=VARCHAR}, 
+      #{deleteMark,jdbcType=BIT}, #{deleteTime,jdbcType=TIMESTAMP}, #{deleteName,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{sortCode,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pangu.foying.web.project.back.entity.BaseNavigation">
+    insert into base_navigation
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="mainId != null">
+        MainID,
+      </if>
+      <if test="parentId != null">
+        ParentID,
+      </if>
+      <if test="navigationType != null">
+        NavigationType,
+      </if>
+      <if test="navigationName != null">
+        NavigationName,
+      </if>
+      <if test="title != null">
+        Title,
+      </if>
+      <if test="subTitle != null">
+        SubTitle,
+      </if>
+      <if test="iconUrl != null">
+        IconUrl,
+      </if>
+      <if test="linkUrl != null">
+        LinkUrl,
+      </if>
+      <if test="isLock != null">
+        IsLock,
+      </if>
+      <if test="actionType != null">
+        ActionType,
+      </if>
+      <if test="isSys != null">
+        IsSYS,
+      </if>
+      <if test="addTime != null">
+        AddTime,
+      </if>
+      <if test="addUserId != null">
+        AddUserID,
+      </if>
+      <if test="addUserName != null">
+        AddUserName,
+      </if>
+      <if test="modifyTime != null">
+        ModifyTime,
+      </if>
+      <if test="modifyUserId != null">
+        ModifyUserID,
+      </if>
+      <if test="modifyName != null">
+        ModifyName,
+      </if>
+      <if test="deleteMark != null">
+        DeleteMark,
+      </if>
+      <if test="deleteTime != null">
+        DeleteTime,
+      </if>
+      <if test="deleteName != null">
+        DeleteName,
+      </if>
+      <if test="remark != null">
+        Remark,
+      </if>
+      <if test="sortCode != null">
+        SortCode,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="mainId != null">
+        #{mainId,jdbcType=INTEGER},
+      </if>
+      <if test="parentId != null">
+        #{parentId,jdbcType=INTEGER},
+      </if>
+      <if test="navigationType != null">
+        #{navigationType,jdbcType=VARCHAR},
+      </if>
+      <if test="navigationName != null">
+        #{navigationName,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="subTitle != null">
+        #{subTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="iconUrl != null">
+        #{iconUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="linkUrl != null">
+        #{linkUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="isLock != null">
+        #{isLock,jdbcType=BIT},
+      </if>
+      <if test="actionType != null">
+        #{actionType,jdbcType=VARCHAR},
+      </if>
+      <if test="isSys != null">
+        #{isSys,jdbcType=BIT},
+      </if>
+      <if test="addTime != null">
+        #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addUserId != null">
+        #{addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="addUserName != null">
+        #{addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyTime != null">
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUserId != null">
+        #{modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyName != null">
+        #{modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteMark != null">
+        #{deleteMark,jdbcType=BIT},
+      </if>
+      <if test="deleteTime != null">
+        #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleteName != null">
+        #{deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="sortCode != null">
+        #{sortCode,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.pangu.foying.web.project.back.entity.BaseNavigationExample" resultType="java.lang.Integer">
+    select count(*) from base_navigation
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update base_navigation
+    <set>
+      <if test="record.id != null">
+        ID = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mainId != null">
+        MainID = #{record.mainId,jdbcType=INTEGER},
+      </if>
+      <if test="record.parentId != null">
+        ParentID = #{record.parentId,jdbcType=INTEGER},
+      </if>
+      <if test="record.navigationType != null">
+        NavigationType = #{record.navigationType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.navigationName != null">
+        NavigationName = #{record.navigationName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.title != null">
+        Title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.subTitle != null">
+        SubTitle = #{record.subTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.iconUrl != null">
+        IconUrl = #{record.iconUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.linkUrl != null">
+        LinkUrl = #{record.linkUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isLock != null">
+        IsLock = #{record.isLock,jdbcType=BIT},
+      </if>
+      <if test="record.actionType != null">
+        ActionType = #{record.actionType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isSys != null">
+        IsSYS = #{record.isSys,jdbcType=BIT},
+      </if>
+      <if test="record.addTime != null">
+        AddTime = #{record.addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.addUserId != null">
+        AddUserID = #{record.addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.addUserName != null">
+        AddUserName = #{record.addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifyTime != null">
+        ModifyTime = #{record.modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.modifyUserId != null">
+        ModifyUserID = #{record.modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifyName != null">
+        ModifyName = #{record.modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.deleteMark != null">
+        DeleteMark = #{record.deleteMark,jdbcType=BIT},
+      </if>
+      <if test="record.deleteTime != null">
+        DeleteTime = #{record.deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.deleteName != null">
+        DeleteName = #{record.deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        Remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sortCode != null">
+        SortCode = #{record.sortCode,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update base_navigation
+    set ID = #{record.id,jdbcType=VARCHAR},
+      MainID = #{record.mainId,jdbcType=INTEGER},
+      ParentID = #{record.parentId,jdbcType=INTEGER},
+      NavigationType = #{record.navigationType,jdbcType=VARCHAR},
+      NavigationName = #{record.navigationName,jdbcType=VARCHAR},
+      Title = #{record.title,jdbcType=VARCHAR},
+      SubTitle = #{record.subTitle,jdbcType=VARCHAR},
+      IconUrl = #{record.iconUrl,jdbcType=VARCHAR},
+      LinkUrl = #{record.linkUrl,jdbcType=VARCHAR},
+      IsLock = #{record.isLock,jdbcType=BIT},
+      ActionType = #{record.actionType,jdbcType=VARCHAR},
+      IsSYS = #{record.isSys,jdbcType=BIT},
+      AddTime = #{record.addTime,jdbcType=TIMESTAMP},
+      AddUserID = #{record.addUserId,jdbcType=VARCHAR},
+      AddUserName = #{record.addUserName,jdbcType=VARCHAR},
+      ModifyTime = #{record.modifyTime,jdbcType=TIMESTAMP},
+      ModifyUserID = #{record.modifyUserId,jdbcType=VARCHAR},
+      ModifyName = #{record.modifyName,jdbcType=VARCHAR},
+      DeleteMark = #{record.deleteMark,jdbcType=BIT},
+      DeleteTime = #{record.deleteTime,jdbcType=TIMESTAMP},
+      DeleteName = #{record.deleteName,jdbcType=VARCHAR},
+      Remark = #{record.remark,jdbcType=VARCHAR},
+      SortCode = #{record.sortCode,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pangu.foying.web.project.back.entity.BaseNavigation">
+    update base_navigation
+    <set>
+      <if test="mainId != null">
+        MainID = #{mainId,jdbcType=INTEGER},
+      </if>
+      <if test="parentId != null">
+        ParentID = #{parentId,jdbcType=INTEGER},
+      </if>
+      <if test="navigationType != null">
+        NavigationType = #{navigationType,jdbcType=VARCHAR},
+      </if>
+      <if test="navigationName != null">
+        NavigationName = #{navigationName,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        Title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="subTitle != null">
+        SubTitle = #{subTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="iconUrl != null">
+        IconUrl = #{iconUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="linkUrl != null">
+        LinkUrl = #{linkUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="isLock != null">
+        IsLock = #{isLock,jdbcType=BIT},
+      </if>
+      <if test="actionType != null">
+        ActionType = #{actionType,jdbcType=VARCHAR},
+      </if>
+      <if test="isSys != null">
+        IsSYS = #{isSys,jdbcType=BIT},
+      </if>
+      <if test="addTime != null">
+        AddTime = #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addUserId != null">
+        AddUserID = #{addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="addUserName != null">
+        AddUserName = #{addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyTime != null">
+        ModifyTime = #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUserId != null">
+        ModifyUserID = #{modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyName != null">
+        ModifyName = #{modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteMark != null">
+        DeleteMark = #{deleteMark,jdbcType=BIT},
+      </if>
+      <if test="deleteTime != null">
+        DeleteTime = #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleteName != null">
+        DeleteName = #{deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        Remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="sortCode != null">
+        SortCode = #{sortCode,jdbcType=INTEGER},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pangu.foying.web.project.back.entity.BaseNavigation">
+    update base_navigation
+    set MainID = #{mainId,jdbcType=INTEGER},
+      ParentID = #{parentId,jdbcType=INTEGER},
+      NavigationType = #{navigationType,jdbcType=VARCHAR},
+      NavigationName = #{navigationName,jdbcType=VARCHAR},
+      Title = #{title,jdbcType=VARCHAR},
+      SubTitle = #{subTitle,jdbcType=VARCHAR},
+      IconUrl = #{iconUrl,jdbcType=VARCHAR},
+      LinkUrl = #{linkUrl,jdbcType=VARCHAR},
+      IsLock = #{isLock,jdbcType=BIT},
+      ActionType = #{actionType,jdbcType=VARCHAR},
+      IsSYS = #{isSys,jdbcType=BIT},
+      AddTime = #{addTime,jdbcType=TIMESTAMP},
+      AddUserID = #{addUserId,jdbcType=VARCHAR},
+      AddUserName = #{addUserName,jdbcType=VARCHAR},
+      ModifyTime = #{modifyTime,jdbcType=TIMESTAMP},
+      ModifyUserID = #{modifyUserId,jdbcType=VARCHAR},
+      ModifyName = #{modifyName,jdbcType=VARCHAR},
+      DeleteMark = #{deleteMark,jdbcType=BIT},
+      DeleteTime = #{deleteTime,jdbcType=TIMESTAMP},
+      DeleteName = #{deleteName,jdbcType=VARCHAR},
+      Remark = #{remark,jdbcType=VARCHAR},
+      SortCode = #{sortCode,jdbcType=INTEGER}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

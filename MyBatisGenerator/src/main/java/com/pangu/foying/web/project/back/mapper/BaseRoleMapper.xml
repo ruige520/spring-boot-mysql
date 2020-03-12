@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pangu.foying.web.project.back.mapper.BaseRoleMapper">
+  <resultMap id="BaseResultMap" type="com.pangu.foying.web.project.back.entity.BaseRole">
+    <constructor>
+      <idArg column="ID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="RoleEncode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="RoleName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="RoleType" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="IsSYS" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="AddTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="AddUserID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="AddUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ModifyTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="ModifyUserID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ModifyName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="DeleteName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="DeleteMark" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="DeleteTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="Remark" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="SortCode" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    </constructor>
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ID, RoleEncode, RoleName, RoleType, IsSYS, AddTime, AddUserID, AddUserName, ModifyTime, 
+    ModifyUserID, ModifyName, DeleteName, DeleteMark, DeleteTime, Remark, SortCode
+  </sql>
+  <select id="selectByExample" parameterType="com.pangu.foying.web.project.back.entity.BaseRoleExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from base_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from base_role
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from base_role
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.pangu.foying.web.project.back.entity.BaseRoleExample">
+    delete from base_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.pangu.foying.web.project.back.entity.BaseRole">
+    insert into base_role (ID, RoleEncode, RoleName, 
+      RoleType, IsSYS, AddTime, 
+      AddUserID, AddUserName, ModifyTime, 
+      ModifyUserID, ModifyName, DeleteName, 
+      DeleteMark, DeleteTime, Remark, 
+      SortCode)
+    values (#{id,jdbcType=VARCHAR}, #{roleEncode,jdbcType=VARCHAR}, #{roleName,jdbcType=VARCHAR}, 
+      #{roleType,jdbcType=VARCHAR}, #{isSys,jdbcType=BIT}, #{addTime,jdbcType=TIMESTAMP}, 
+      #{addUserId,jdbcType=VARCHAR}, #{addUserName,jdbcType=VARCHAR}, #{modifyTime,jdbcType=TIMESTAMP}, 
+      #{modifyUserId,jdbcType=VARCHAR}, #{modifyName,jdbcType=VARCHAR}, #{deleteName,jdbcType=VARCHAR}, 
+      #{deleteMark,jdbcType=BIT}, #{deleteTime,jdbcType=TIMESTAMP}, #{remark,jdbcType=VARCHAR}, 
+      #{sortCode,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pangu.foying.web.project.back.entity.BaseRole">
+    insert into base_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="roleEncode != null">
+        RoleEncode,
+      </if>
+      <if test="roleName != null">
+        RoleName,
+      </if>
+      <if test="roleType != null">
+        RoleType,
+      </if>
+      <if test="isSys != null">
+        IsSYS,
+      </if>
+      <if test="addTime != null">
+        AddTime,
+      </if>
+      <if test="addUserId != null">
+        AddUserID,
+      </if>
+      <if test="addUserName != null">
+        AddUserName,
+      </if>
+      <if test="modifyTime != null">
+        ModifyTime,
+      </if>
+      <if test="modifyUserId != null">
+        ModifyUserID,
+      </if>
+      <if test="modifyName != null">
+        ModifyName,
+      </if>
+      <if test="deleteName != null">
+        DeleteName,
+      </if>
+      <if test="deleteMark != null">
+        DeleteMark,
+      </if>
+      <if test="deleteTime != null">
+        DeleteTime,
+      </if>
+      <if test="remark != null">
+        Remark,
+      </if>
+      <if test="sortCode != null">
+        SortCode,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="roleEncode != null">
+        #{roleEncode,jdbcType=VARCHAR},
+      </if>
+      <if test="roleName != null">
+        #{roleName,jdbcType=VARCHAR},
+      </if>
+      <if test="roleType != null">
+        #{roleType,jdbcType=VARCHAR},
+      </if>
+      <if test="isSys != null">
+        #{isSys,jdbcType=BIT},
+      </if>
+      <if test="addTime != null">
+        #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addUserId != null">
+        #{addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="addUserName != null">
+        #{addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyTime != null">
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUserId != null">
+        #{modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyName != null">
+        #{modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteName != null">
+        #{deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteMark != null">
+        #{deleteMark,jdbcType=BIT},
+      </if>
+      <if test="deleteTime != null">
+        #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="sortCode != null">
+        #{sortCode,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.pangu.foying.web.project.back.entity.BaseRoleExample" resultType="java.lang.Integer">
+    select count(*) from base_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update base_role
+    <set>
+      <if test="record.id != null">
+        ID = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleEncode != null">
+        RoleEncode = #{record.roleEncode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleName != null">
+        RoleName = #{record.roleName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleType != null">
+        RoleType = #{record.roleType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isSys != null">
+        IsSYS = #{record.isSys,jdbcType=BIT},
+      </if>
+      <if test="record.addTime != null">
+        AddTime = #{record.addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.addUserId != null">
+        AddUserID = #{record.addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.addUserName != null">
+        AddUserName = #{record.addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifyTime != null">
+        ModifyTime = #{record.modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.modifyUserId != null">
+        ModifyUserID = #{record.modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifyName != null">
+        ModifyName = #{record.modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.deleteName != null">
+        DeleteName = #{record.deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.deleteMark != null">
+        DeleteMark = #{record.deleteMark,jdbcType=BIT},
+      </if>
+      <if test="record.deleteTime != null">
+        DeleteTime = #{record.deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.remark != null">
+        Remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sortCode != null">
+        SortCode = #{record.sortCode,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update base_role
+    set ID = #{record.id,jdbcType=VARCHAR},
+      RoleEncode = #{record.roleEncode,jdbcType=VARCHAR},
+      RoleName = #{record.roleName,jdbcType=VARCHAR},
+      RoleType = #{record.roleType,jdbcType=VARCHAR},
+      IsSYS = #{record.isSys,jdbcType=BIT},
+      AddTime = #{record.addTime,jdbcType=TIMESTAMP},
+      AddUserID = #{record.addUserId,jdbcType=VARCHAR},
+      AddUserName = #{record.addUserName,jdbcType=VARCHAR},
+      ModifyTime = #{record.modifyTime,jdbcType=TIMESTAMP},
+      ModifyUserID = #{record.modifyUserId,jdbcType=VARCHAR},
+      ModifyName = #{record.modifyName,jdbcType=VARCHAR},
+      DeleteName = #{record.deleteName,jdbcType=VARCHAR},
+      DeleteMark = #{record.deleteMark,jdbcType=BIT},
+      DeleteTime = #{record.deleteTime,jdbcType=TIMESTAMP},
+      Remark = #{record.remark,jdbcType=VARCHAR},
+      SortCode = #{record.sortCode,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pangu.foying.web.project.back.entity.BaseRole">
+    update base_role
+    <set>
+      <if test="roleEncode != null">
+        RoleEncode = #{roleEncode,jdbcType=VARCHAR},
+      </if>
+      <if test="roleName != null">
+        RoleName = #{roleName,jdbcType=VARCHAR},
+      </if>
+      <if test="roleType != null">
+        RoleType = #{roleType,jdbcType=VARCHAR},
+      </if>
+      <if test="isSys != null">
+        IsSYS = #{isSys,jdbcType=BIT},
+      </if>
+      <if test="addTime != null">
+        AddTime = #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addUserId != null">
+        AddUserID = #{addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="addUserName != null">
+        AddUserName = #{addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyTime != null">
+        ModifyTime = #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUserId != null">
+        ModifyUserID = #{modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyName != null">
+        ModifyName = #{modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteName != null">
+        DeleteName = #{deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteMark != null">
+        DeleteMark = #{deleteMark,jdbcType=BIT},
+      </if>
+      <if test="deleteTime != null">
+        DeleteTime = #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        Remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="sortCode != null">
+        SortCode = #{sortCode,jdbcType=INTEGER},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pangu.foying.web.project.back.entity.BaseRole">
+    update base_role
+    set RoleEncode = #{roleEncode,jdbcType=VARCHAR},
+      RoleName = #{roleName,jdbcType=VARCHAR},
+      RoleType = #{roleType,jdbcType=VARCHAR},
+      IsSYS = #{isSys,jdbcType=BIT},
+      AddTime = #{addTime,jdbcType=TIMESTAMP},
+      AddUserID = #{addUserId,jdbcType=VARCHAR},
+      AddUserName = #{addUserName,jdbcType=VARCHAR},
+      ModifyTime = #{modifyTime,jdbcType=TIMESTAMP},
+      ModifyUserID = #{modifyUserId,jdbcType=VARCHAR},
+      ModifyName = #{modifyName,jdbcType=VARCHAR},
+      DeleteName = #{deleteName,jdbcType=VARCHAR},
+      DeleteMark = #{deleteMark,jdbcType=BIT},
+      DeleteTime = #{deleteTime,jdbcType=TIMESTAMP},
+      Remark = #{remark,jdbcType=VARCHAR},
+      SortCode = #{sortCode,jdbcType=INTEGER}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.pangu.foying.web.project.back.entity.BaseRole">
+    <constructor>
+      <idArg column="ID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="RoleEncode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="RoleName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="RoleType" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="IsSYS" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="AddTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="AddUserID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="AddUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ModifyTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="ModifyUserID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ModifyName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="DeleteName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="DeleteMark" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="DeleteTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="Remark" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="SortCode" javaType="java.lang.Integer" jdbcType="INTEGER" />
+    </constructor>
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ID, RoleEncode, RoleName, RoleType, IsSYS, AddTime, AddUserID, AddUserName, ModifyTime, 
+    ModifyUserID, ModifyName, DeleteName, DeleteMark, DeleteTime, Remark, SortCode
+  </sql>
+  <select id="selectByExample" parameterType="com.pangu.foying.web.project.back.entity.BaseRoleExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from base_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from base_role
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from base_role
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.pangu.foying.web.project.back.entity.BaseRoleExample">
+    delete from base_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.pangu.foying.web.project.back.entity.BaseRole">
+    insert into base_role (ID, RoleEncode, RoleName, 
+      RoleType, IsSYS, AddTime, 
+      AddUserID, AddUserName, ModifyTime, 
+      ModifyUserID, ModifyName, DeleteName, 
+      DeleteMark, DeleteTime, Remark, 
+      SortCode)
+    values (#{id,jdbcType=VARCHAR}, #{roleEncode,jdbcType=VARCHAR}, #{roleName,jdbcType=VARCHAR}, 
+      #{roleType,jdbcType=VARCHAR}, #{isSys,jdbcType=BIT}, #{addTime,jdbcType=TIMESTAMP}, 
+      #{addUserId,jdbcType=VARCHAR}, #{addUserName,jdbcType=VARCHAR}, #{modifyTime,jdbcType=TIMESTAMP}, 
+      #{modifyUserId,jdbcType=VARCHAR}, #{modifyName,jdbcType=VARCHAR}, #{deleteName,jdbcType=VARCHAR}, 
+      #{deleteMark,jdbcType=BIT}, #{deleteTime,jdbcType=TIMESTAMP}, #{remark,jdbcType=VARCHAR}, 
+      #{sortCode,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pangu.foying.web.project.back.entity.BaseRole">
+    insert into base_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="roleEncode != null">
+        RoleEncode,
+      </if>
+      <if test="roleName != null">
+        RoleName,
+      </if>
+      <if test="roleType != null">
+        RoleType,
+      </if>
+      <if test="isSys != null">
+        IsSYS,
+      </if>
+      <if test="addTime != null">
+        AddTime,
+      </if>
+      <if test="addUserId != null">
+        AddUserID,
+      </if>
+      <if test="addUserName != null">
+        AddUserName,
+      </if>
+      <if test="modifyTime != null">
+        ModifyTime,
+      </if>
+      <if test="modifyUserId != null">
+        ModifyUserID,
+      </if>
+      <if test="modifyName != null">
+        ModifyName,
+      </if>
+      <if test="deleteName != null">
+        DeleteName,
+      </if>
+      <if test="deleteMark != null">
+        DeleteMark,
+      </if>
+      <if test="deleteTime != null">
+        DeleteTime,
+      </if>
+      <if test="remark != null">
+        Remark,
+      </if>
+      <if test="sortCode != null">
+        SortCode,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="roleEncode != null">
+        #{roleEncode,jdbcType=VARCHAR},
+      </if>
+      <if test="roleName != null">
+        #{roleName,jdbcType=VARCHAR},
+      </if>
+      <if test="roleType != null">
+        #{roleType,jdbcType=VARCHAR},
+      </if>
+      <if test="isSys != null">
+        #{isSys,jdbcType=BIT},
+      </if>
+      <if test="addTime != null">
+        #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addUserId != null">
+        #{addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="addUserName != null">
+        #{addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyTime != null">
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUserId != null">
+        #{modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyName != null">
+        #{modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteName != null">
+        #{deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteMark != null">
+        #{deleteMark,jdbcType=BIT},
+      </if>
+      <if test="deleteTime != null">
+        #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="sortCode != null">
+        #{sortCode,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.pangu.foying.web.project.back.entity.BaseRoleExample" resultType="java.lang.Integer">
+    select count(*) from base_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update base_role
+    <set>
+      <if test="record.id != null">
+        ID = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleEncode != null">
+        RoleEncode = #{record.roleEncode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleName != null">
+        RoleName = #{record.roleName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleType != null">
+        RoleType = #{record.roleType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isSys != null">
+        IsSYS = #{record.isSys,jdbcType=BIT},
+      </if>
+      <if test="record.addTime != null">
+        AddTime = #{record.addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.addUserId != null">
+        AddUserID = #{record.addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.addUserName != null">
+        AddUserName = #{record.addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifyTime != null">
+        ModifyTime = #{record.modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.modifyUserId != null">
+        ModifyUserID = #{record.modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifyName != null">
+        ModifyName = #{record.modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.deleteName != null">
+        DeleteName = #{record.deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.deleteMark != null">
+        DeleteMark = #{record.deleteMark,jdbcType=BIT},
+      </if>
+      <if test="record.deleteTime != null">
+        DeleteTime = #{record.deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.remark != null">
+        Remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sortCode != null">
+        SortCode = #{record.sortCode,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update base_role
+    set ID = #{record.id,jdbcType=VARCHAR},
+      RoleEncode = #{record.roleEncode,jdbcType=VARCHAR},
+      RoleName = #{record.roleName,jdbcType=VARCHAR},
+      RoleType = #{record.roleType,jdbcType=VARCHAR},
+      IsSYS = #{record.isSys,jdbcType=BIT},
+      AddTime = #{record.addTime,jdbcType=TIMESTAMP},
+      AddUserID = #{record.addUserId,jdbcType=VARCHAR},
+      AddUserName = #{record.addUserName,jdbcType=VARCHAR},
+      ModifyTime = #{record.modifyTime,jdbcType=TIMESTAMP},
+      ModifyUserID = #{record.modifyUserId,jdbcType=VARCHAR},
+      ModifyName = #{record.modifyName,jdbcType=VARCHAR},
+      DeleteName = #{record.deleteName,jdbcType=VARCHAR},
+      DeleteMark = #{record.deleteMark,jdbcType=BIT},
+      DeleteTime = #{record.deleteTime,jdbcType=TIMESTAMP},
+      Remark = #{record.remark,jdbcType=VARCHAR},
+      SortCode = #{record.sortCode,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pangu.foying.web.project.back.entity.BaseRole">
+    update base_role
+    <set>
+      <if test="roleEncode != null">
+        RoleEncode = #{roleEncode,jdbcType=VARCHAR},
+      </if>
+      <if test="roleName != null">
+        RoleName = #{roleName,jdbcType=VARCHAR},
+      </if>
+      <if test="roleType != null">
+        RoleType = #{roleType,jdbcType=VARCHAR},
+      </if>
+      <if test="isSys != null">
+        IsSYS = #{isSys,jdbcType=BIT},
+      </if>
+      <if test="addTime != null">
+        AddTime = #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addUserId != null">
+        AddUserID = #{addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="addUserName != null">
+        AddUserName = #{addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyTime != null">
+        ModifyTime = #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUserId != null">
+        ModifyUserID = #{modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyName != null">
+        ModifyName = #{modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteName != null">
+        DeleteName = #{deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteMark != null">
+        DeleteMark = #{deleteMark,jdbcType=BIT},
+      </if>
+      <if test="deleteTime != null">
+        DeleteTime = #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        Remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="sortCode != null">
+        SortCode = #{sortCode,jdbcType=INTEGER},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pangu.foying.web.project.back.entity.BaseRole">
+    update base_role
+    set RoleEncode = #{roleEncode,jdbcType=VARCHAR},
+      RoleName = #{roleName,jdbcType=VARCHAR},
+      RoleType = #{roleType,jdbcType=VARCHAR},
+      IsSYS = #{isSys,jdbcType=BIT},
+      AddTime = #{addTime,jdbcType=TIMESTAMP},
+      AddUserID = #{addUserId,jdbcType=VARCHAR},
+      AddUserName = #{addUserName,jdbcType=VARCHAR},
+      ModifyTime = #{modifyTime,jdbcType=TIMESTAMP},
+      ModifyUserID = #{modifyUserId,jdbcType=VARCHAR},
+      ModifyName = #{modifyName,jdbcType=VARCHAR},
+      DeleteName = #{deleteName,jdbcType=VARCHAR},
+      DeleteMark = #{deleteMark,jdbcType=BIT},
+      DeleteTime = #{deleteTime,jdbcType=TIMESTAMP},
+      Remark = #{remark,jdbcType=VARCHAR},
+      SortCode = #{sortCode,jdbcType=INTEGER}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

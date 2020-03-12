@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pangu.foying.web.project.admin.mapper.BaseAreaMapper">
+  <resultMap id="BaseResultMap" type="com.pangu.foying.web.project.admin.entity.BaseArea">
+    <constructor>
+      <idArg column="ID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="MainID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ParentID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="EnCode" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="AreaName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="SimpleSpelling" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="AreaLevel" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="DeleteMark" javaType="java.lang.Boolean" jdbcType="BIT" />
+      <arg column="AddTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="AddUserID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="AddUserName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ModifyTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="ModifyUserID" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="ModifyName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="DeleteName" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="DeleteTime" javaType="java.sql.Timestamp" jdbcType="TIMESTAMP" />
+      <arg column="Remark" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="SortCode" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="IsSYS" javaType="java.lang.Boolean" jdbcType="BIT" />
+    </constructor>
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ID, MainID, ParentID, EnCode, AreaName, SimpleSpelling, AreaLevel, DeleteMark, AddTime, 
+    AddUserID, AddUserName, ModifyTime, ModifyUserID, ModifyName, DeleteName, DeleteTime, 
+    Remark, SortCode, IsSYS
+  </sql>
+  <select id="selectByExample" parameterType="com.pangu.foying.web.project.admin.entity.BaseAreaExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from base_area
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from base_area
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from base_area
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.pangu.foying.web.project.admin.entity.BaseAreaExample">
+    delete from base_area
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.pangu.foying.web.project.admin.entity.BaseArea">
+    insert into base_area (ID, MainID, ParentID, 
+      EnCode, AreaName, SimpleSpelling, 
+      AreaLevel, DeleteMark, AddTime, 
+      AddUserID, AddUserName, ModifyTime, 
+      ModifyUserID, ModifyName, DeleteName, 
+      DeleteTime, Remark, SortCode, 
+      IsSYS)
+    values (#{id,jdbcType=VARCHAR}, #{mainId,jdbcType=VARCHAR}, #{parentId,jdbcType=VARCHAR}, 
+      #{enCode,jdbcType=VARCHAR}, #{areaName,jdbcType=VARCHAR}, #{simpleSpelling,jdbcType=VARCHAR}, 
+      #{areaLevel,jdbcType=INTEGER}, #{deleteMark,jdbcType=BIT}, #{addTime,jdbcType=TIMESTAMP}, 
+      #{addUserId,jdbcType=VARCHAR}, #{addUserName,jdbcType=VARCHAR}, #{modifyTime,jdbcType=TIMESTAMP}, 
+      #{modifyUserId,jdbcType=VARCHAR}, #{modifyName,jdbcType=VARCHAR}, #{deleteName,jdbcType=VARCHAR}, 
+      #{deleteTime,jdbcType=TIMESTAMP}, #{remark,jdbcType=VARCHAR}, #{sortCode,jdbcType=INTEGER}, 
+      #{isSys,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.pangu.foying.web.project.admin.entity.BaseArea">
+    insert into base_area
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        ID,
+      </if>
+      <if test="mainId != null">
+        MainID,
+      </if>
+      <if test="parentId != null">
+        ParentID,
+      </if>
+      <if test="enCode != null">
+        EnCode,
+      </if>
+      <if test="areaName != null">
+        AreaName,
+      </if>
+      <if test="simpleSpelling != null">
+        SimpleSpelling,
+      </if>
+      <if test="areaLevel != null">
+        AreaLevel,
+      </if>
+      <if test="deleteMark != null">
+        DeleteMark,
+      </if>
+      <if test="addTime != null">
+        AddTime,
+      </if>
+      <if test="addUserId != null">
+        AddUserID,
+      </if>
+      <if test="addUserName != null">
+        AddUserName,
+      </if>
+      <if test="modifyTime != null">
+        ModifyTime,
+      </if>
+      <if test="modifyUserId != null">
+        ModifyUserID,
+      </if>
+      <if test="modifyName != null">
+        ModifyName,
+      </if>
+      <if test="deleteName != null">
+        DeleteName,
+      </if>
+      <if test="deleteTime != null">
+        DeleteTime,
+      </if>
+      <if test="remark != null">
+        Remark,
+      </if>
+      <if test="sortCode != null">
+        SortCode,
+      </if>
+      <if test="isSys != null">
+        IsSYS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="mainId != null">
+        #{mainId,jdbcType=VARCHAR},
+      </if>
+      <if test="parentId != null">
+        #{parentId,jdbcType=VARCHAR},
+      </if>
+      <if test="enCode != null">
+        #{enCode,jdbcType=VARCHAR},
+      </if>
+      <if test="areaName != null">
+        #{areaName,jdbcType=VARCHAR},
+      </if>
+      <if test="simpleSpelling != null">
+        #{simpleSpelling,jdbcType=VARCHAR},
+      </if>
+      <if test="areaLevel != null">
+        #{areaLevel,jdbcType=INTEGER},
+      </if>
+      <if test="deleteMark != null">
+        #{deleteMark,jdbcType=BIT},
+      </if>
+      <if test="addTime != null">
+        #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addUserId != null">
+        #{addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="addUserName != null">
+        #{addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyTime != null">
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUserId != null">
+        #{modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyName != null">
+        #{modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteName != null">
+        #{deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteTime != null">
+        #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="sortCode != null">
+        #{sortCode,jdbcType=INTEGER},
+      </if>
+      <if test="isSys != null">
+        #{isSys,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.pangu.foying.web.project.admin.entity.BaseAreaExample" resultType="java.lang.Integer">
+    select count(*) from base_area
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update base_area
+    <set>
+      <if test="record.id != null">
+        ID = #{record.id,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mainId != null">
+        MainID = #{record.mainId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.parentId != null">
+        ParentID = #{record.parentId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.enCode != null">
+        EnCode = #{record.enCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.areaName != null">
+        AreaName = #{record.areaName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.simpleSpelling != null">
+        SimpleSpelling = #{record.simpleSpelling,jdbcType=VARCHAR},
+      </if>
+      <if test="record.areaLevel != null">
+        AreaLevel = #{record.areaLevel,jdbcType=INTEGER},
+      </if>
+      <if test="record.deleteMark != null">
+        DeleteMark = #{record.deleteMark,jdbcType=BIT},
+      </if>
+      <if test="record.addTime != null">
+        AddTime = #{record.addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.addUserId != null">
+        AddUserID = #{record.addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.addUserName != null">
+        AddUserName = #{record.addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifyTime != null">
+        ModifyTime = #{record.modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.modifyUserId != null">
+        ModifyUserID = #{record.modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifyName != null">
+        ModifyName = #{record.modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.deleteName != null">
+        DeleteName = #{record.deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.deleteTime != null">
+        DeleteTime = #{record.deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.remark != null">
+        Remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sortCode != null">
+        SortCode = #{record.sortCode,jdbcType=INTEGER},
+      </if>
+      <if test="record.isSys != null">
+        IsSYS = #{record.isSys,jdbcType=BIT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update base_area
+    set ID = #{record.id,jdbcType=VARCHAR},
+      MainID = #{record.mainId,jdbcType=VARCHAR},
+      ParentID = #{record.parentId,jdbcType=VARCHAR},
+      EnCode = #{record.enCode,jdbcType=VARCHAR},
+      AreaName = #{record.areaName,jdbcType=VARCHAR},
+      SimpleSpelling = #{record.simpleSpelling,jdbcType=VARCHAR},
+      AreaLevel = #{record.areaLevel,jdbcType=INTEGER},
+      DeleteMark = #{record.deleteMark,jdbcType=BIT},
+      AddTime = #{record.addTime,jdbcType=TIMESTAMP},
+      AddUserID = #{record.addUserId,jdbcType=VARCHAR},
+      AddUserName = #{record.addUserName,jdbcType=VARCHAR},
+      ModifyTime = #{record.modifyTime,jdbcType=TIMESTAMP},
+      ModifyUserID = #{record.modifyUserId,jdbcType=VARCHAR},
+      ModifyName = #{record.modifyName,jdbcType=VARCHAR},
+      DeleteName = #{record.deleteName,jdbcType=VARCHAR},
+      DeleteTime = #{record.deleteTime,jdbcType=TIMESTAMP},
+      Remark = #{record.remark,jdbcType=VARCHAR},
+      SortCode = #{record.sortCode,jdbcType=INTEGER},
+      IsSYS = #{record.isSys,jdbcType=BIT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.pangu.foying.web.project.admin.entity.BaseArea">
+    update base_area
+    <set>
+      <if test="mainId != null">
+        MainID = #{mainId,jdbcType=VARCHAR},
+      </if>
+      <if test="parentId != null">
+        ParentID = #{parentId,jdbcType=VARCHAR},
+      </if>
+      <if test="enCode != null">
+        EnCode = #{enCode,jdbcType=VARCHAR},
+      </if>
+      <if test="areaName != null">
+        AreaName = #{areaName,jdbcType=VARCHAR},
+      </if>
+      <if test="simpleSpelling != null">
+        SimpleSpelling = #{simpleSpelling,jdbcType=VARCHAR},
+      </if>
+      <if test="areaLevel != null">
+        AreaLevel = #{areaLevel,jdbcType=INTEGER},
+      </if>
+      <if test="deleteMark != null">
+        DeleteMark = #{deleteMark,jdbcType=BIT},
+      </if>
+      <if test="addTime != null">
+        AddTime = #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addUserId != null">
+        AddUserID = #{addUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="addUserName != null">
+        AddUserName = #{addUserName,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyTime != null">
+        ModifyTime = #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyUserId != null">
+        ModifyUserID = #{modifyUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyName != null">
+        ModifyName = #{modifyName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteName != null">
+        DeleteName = #{deleteName,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteTime != null">
+        DeleteTime = #{deleteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null">
+        Remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="sortCode != null">
+        SortCode = #{sortCode,jdbcType=INTEGER},
+      </if>
+      <if test="isSys != null">
+        IsSYS = #{isSys,jdbcType=BIT},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.pangu.foying.web.project.admin.entity.BaseArea">
+    update base_area
+    set MainID = #{mainId,jdbcType=VARCHAR},
+      ParentID = #{parentId,jdbcType=VARCHAR},
+      EnCode = #{enCode,jdbcType=VARCHAR},
+      AreaName = #{areaName,jdbcType=VARCHAR},
+      SimpleSpelling = #{simpleSpelling,jdbcType=VARCHAR},
+      AreaLevel = #{areaLevel,jdbcType=INTEGER},
+      DeleteMark = #{deleteMark,jdbcType=BIT},
+      AddTime = #{addTime,jdbcType=TIMESTAMP},
+      AddUserID = #{addUserId,jdbcType=VARCHAR},
+      AddUserName = #{addUserName,jdbcType=VARCHAR},
+      ModifyTime = #{modifyTime,jdbcType=TIMESTAMP},
+      ModifyUserID = #{modifyUserId,jdbcType=VARCHAR},
+      ModifyName = #{modifyName,jdbcType=VARCHAR},
+      DeleteName = #{deleteName,jdbcType=VARCHAR},
+      DeleteTime = #{deleteTime,jdbcType=TIMESTAMP},
+      Remark = #{remark,jdbcType=VARCHAR},
+      SortCode = #{sortCode,jdbcType=INTEGER},
+      IsSYS = #{isSys,jdbcType=BIT}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+
+  <!--BaseArea通用分页查询-->
+  <select id="selectByExampleByPage" resultMap="BaseResultMap" parameterType="com.pangu.foying.web.project.admin.entity.BaseAreaExample" >
+    SELECT
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    FROM base_area
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <bind name="key_offset" value="(pageIndex-1)*pageSize"></bind>
+    ORDER BY ModifyTime DESC LIMIT ${key_offset},${pageSize};
+  </select>
+</mapper>

@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d46bb2c8-660e-4ccd-b623-9f1401524feb" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/FoYing-Web/target/" />
+    <ignored path="$PROJECT_DIR$/FoYing-Commom/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BaseAreaController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/controller/BaseAreaController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="36" column="53" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FoYing-Web/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1003">
+              <caret line="59" column="42" lean-forward="false" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseSystemLogMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseSystemLogMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="481">
+              <caret line="437" column="14" lean-forward="false" selection-start-line="437" selection-start-column="14" selection-end-line="437" selection-end-column="14" />
+              <folding>
+                <marker date="1575877596079" expanded="true" signature="4924:5034" ph="select from base_systemlog" />
+                <marker date="1575877596079" expanded="true" signature="5119:5183" ph="delete from base_systemlog... " />
+                <marker date="1575877596079" expanded="true" signature="5311:5337" ph="delete from base_systemlog... " />
+                <marker date="1575877596079" expanded="true" signature="5541:6426" ph="insert into base_systemlog... " />
+                <marker date="1575877596079" expanded="true" signature="9650:9685" ph="select count... base_systemlog" />
+                <marker date="1575877596079" expanded="true" signature="12110:13146" ph="update base_systemlog... " />
+                <marker date="1575877596079" expanded="true" signature="13381:15173" ph="update base_systemlog... " />
+                <marker date="1575877596079" expanded="true" signature="15297:16210" ph="update base_systemlog... " />
+                <marker date="1575877596079" expanded="true" signature="17267:17610" ph="SELECT disti... base_systemlog" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseItemsDetailMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseItemsDetailMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-838">
+              <caret line="409" column="36" lean-forward="false" selection-start-line="409" selection-start-column="36" selection-end-line="409" selection-end-column="36" />
+              <folding>
+                <marker date="1575881659497" expanded="true" signature="4818:4930" ph="select from base_itemsdetail" />
+                <marker date="1575881659497" expanded="true" signature="5015:5081" ph="delete from base_itemsdetail... " />
+                <marker date="1575881659497" expanded="true" signature="5211:5239" ph="delete from base_itemsdetail... " />
+                <marker date="1575881659497" expanded="true" signature="5445:6250" ph="insert into base_itemsdetail... " />
+                <marker date="1575881659497" expanded="true" signature="9282:9319" ph="select count... base_itemsdetail" />
+                <marker date="1575881659497" expanded="true" signature="11598:12554" ph="update base_itemsdetail... " />
+                <marker date="1575881659497" expanded="true" signature="12791:14451" ph="update base_itemsdetail... " />
+                <marker date="1575881659497" expanded="true" signature="14577:15417" ph="update base_itemsdetail... " />
+                <marker date="1575881659497" expanded="true" signature="15978:16416" ph="select from Base_Items" />
+                <marker date="1575881659497" expanded="true" signature="18125:19108" ph="update Base_ItemsDetail... " />
+                <marker date="1575881659497" expanded="true" signature="19318:19676" ph="SELECT disti... base_itemsdetail" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-646">
+              <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application-druid.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/application-druid.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseItemsMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseItemsMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="420" column="2" lean-forward="false" selection-start-line="420" selection-start-column="2" selection-end-line="444" selection-end-column="11" />
+              <folding>
+                <marker date="1575880024755" expanded="true" signature="4883:4989" ph="select from base_items" />
+                <marker date="1575880024755" expanded="true" signature="5074:5134" ph="delete from base_items... " />
+                <marker date="1575880024755" expanded="true" signature="5258:5280" ph="delete from base_items... " />
+                <marker date="1575880024755" expanded="true" signature="5480:6331" ph="insert into base_items... " />
+                <marker date="1575880024755" expanded="true" signature="9491:9522" ph="select count... base_items" />
+                <marker date="1575880024755" expanded="true" signature="11902:12904" ph="update base_items... " />
+                <marker date="1575880024755" expanded="true" signature="13135:14882" ph="update base_items... " />
+                <marker date="1575880024755" expanded="true" signature="15002:15881" ph="update base_items... " />
+                <marker date="1575880024755" expanded="true" signature="16050:17079" ph="update Base_Items... " />
+                <marker date="1575880024755" expanded="true" signature="17278:17617" ph="SELECT disti... base_items" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseNavigationMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseNavigationMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="497" column="2" lean-forward="true" selection-start-line="497" selection-start-column="2" selection-end-line="522" selection-end-column="11" />
+              <folding>
+                <marker date="1575877063360" expanded="true" signature="5352:5463" ph="select from base_navigation" />
+                <marker date="1575877063360" expanded="true" signature="5548:5613" ph="delete from base_navigation... " />
+                <marker date="1575877063360" expanded="true" signature="5742:5769" ph="delete from base_navigation... " />
+                <marker date="1575877063360" expanded="true" signature="5974:7048" ph="insert into base_navigation... " />
+                <marker date="1575877063360" expanded="true" signature="10981:11017" ph="select count... base_navigation" />
+                <marker date="1575877063360" expanded="true" signature="13958:15239" ph="update base_navigation... " />
+                <marker date="1575877063360" expanded="true" signature="15475:17713" ph="update base_navigation... " />
+                <marker date="1575877063360" expanded="true" signature="17838:18961" ph="update base_navigation... " />
+                <marker date="1575877063360" expanded="true" signature="19986:20330" ph="SELECT disti... base_navigation" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseRoleMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseRoleMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="387" column="2" lean-forward="true" selection-start-line="387" selection-start-column="2" selection-end-line="394" selection-end-column="11" />
+              <folding>
+                <marker date="1575877504585" expanded="true" signature="4695:4800" ph="select from base_role" />
+                <marker date="1575877504585" expanded="true" signature="4885:4944" ph="delete from base_role... " />
+                <marker date="1575877504585" expanded="true" signature="5067:5088" ph="delete from base_role... " />
+                <marker date="1575877504585" expanded="true" signature="5287:6045" ph="insert into base_role... " />
+                <marker date="1575877504585" expanded="true" signature="8902:8932" ph="select count... base_role" />
+                <marker date="1575877504585" expanded="true" signature="11092:11987" ph="update base_role... " />
+                <marker date="1575877504585" expanded="true" signature="12217:13772" ph="update base_role... " />
+                <marker date="1575877504585" expanded="true" signature="13891:14677" ph="update base_role... " />
+                <marker date="1575877504585" expanded="true" signature="15175:15513" ph="SELECT disti... base_role" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>BaseResultMap</find>
+      <find>getBaseItemsListForLeftShow</find>
+      <find>getBaseItemsDetailListForShow</find>
+      <find>Base_Column_BaseItemsDetailListByBaseItems</find>
+      <find>deleteSingleBaseItems</find>
+      <find>batchUpdate</find>
+      <find>selectAll</find>
+      <find>selectBaseRole</find>
+      <find>getBaseItemsDetailListByBaseItemsEncode</find>
+    </findStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/content/static/js/app.js" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseManagerRoleMapper.xml" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseOrganizeRoleMapper.xml" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/entity/Wechat_User_InfoExample.java" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/entity/Wechat_User_Info.java" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/Wechat_User_InfoMapper.java" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/entity/WechatUserInfo.java" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/WechatUserInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/WechatUserInfoMapper.java" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/entity/WechatUserInfoExample.java" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/entity/BaseItems.java" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/BaseItemsDetailMapper.java" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseAreaMapper.xml" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseManagerMapper.xml" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseOrganizeMapper.xml" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseNavigationMapper.xml" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseNavigationRoleMapper.xml" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseRoleMapper.xml" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseSystemLogMapper.xml" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/service/bizImpl/BaseItemsBizImpl.java" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseItemsMapper.xml" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseItemsDetailMapper.xml" />
+        <option value="$PROJECT_DIR$/FoYing-Web/src/main/resources/application-druid.yml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/work/apache-maven-3.2.3" />
+        <option name="userSettingsFile" value="D:\work\apache-maven-3.2.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-66" />
+    <option name="y" value="412" />
+    <option name="width" value="1612" />
+    <option name="height" value="884" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FoYing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FoYing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FoYing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FoYing" type="462c0819:PsiDirectoryNode" />
+              <item name="FoYing-Web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FoYing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FoYing" type="462c0819:PsiDirectoryNode" />
+              <item name="FoYing-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FoYing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FoYing" type="462c0819:PsiDirectoryNode" />
+              <item name="FoYing-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FoYing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FoYing" type="462c0819:PsiDirectoryNode" />
+              <item name="FoYing-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FoYing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FoYing" type="462c0819:PsiDirectoryNode" />
+              <item name="FoYing-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FoYing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FoYing" type="462c0819:PsiDirectoryNode" />
+              <item name="FoYing-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FoYing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FoYing" type="462c0819:PsiDirectoryNode" />
+              <item name="FoYing-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FoYing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FoYing" type="462c0819:PsiDirectoryNode" />
+              <item name="FoYing-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.pangu.foying.web.project.admin.mapper" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\work6\demo\FoYing\FoYing-Web\src\main\resources\mybatis\mapper\admin" />
+      <recent name="E:\work6\demo\FoYing\FoYing-Web\src\main\java\com\pangu\foying\web\project\admin\entity" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration name="FoYingWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pangu.foying.web.FoYingWebApplication" />
+      <module name="FoYing-Web" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d46bb2c8-660e-4ccd-b623-9f1401524feb" name="Default" comment="" />
+      <created>1575860870150</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575860870150</updated>
+      <workItem from="1575860875074" duration="15511000" />
+      <workItem from="1575937599633" duration="5212000" />
+      <workItem from="1576027173775" duration="742000" />
+      <workItem from="1576036320750" duration="2038000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="23503000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2553305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="8" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://D:/work/repository/com/alibaba/druid-spring-boot-starter/1.1.18/druid-spring-boot-starter-1.1.18.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1045">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Commom/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="61" column="24" lean-forward="false" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/entity/BaseRole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/entity/BaseOrganize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseOrganizeRoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="181" column="11" lean-forward="false" selection-start-line="181" selection-start-column="11" selection-end-line="181" selection-end-column="11" />
+          <folding>
+            <marker date="1575872688309" expanded="true" signature="3547:3661" ph="select from base_organize_role" />
+            <marker date="1575872688309" expanded="true" signature="3746:3814" ph="delete from base_organize_role... " />
+            <marker date="1575872688309" expanded="true" signature="3945:3975" ph="delete from base_organize_role... " />
+            <marker date="1575872688309" expanded="true" signature="4182:4363" ph="insert into base_organize_role... " />
+            <marker date="1575872688309" expanded="true" signature="5273:5312" ph="select count... base_organize_role" />
+            <marker date="1575872688309" expanded="true" signature="6035:6227" ph="update base_organize_role... " />
+            <marker date="1575872688309" expanded="true" signature="6465:6765" ph="update base_organize_role... " />
+            <marker date="1575872688309" expanded="true" signature="6892:7066" ph="update base_organize_role... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/entity/Wechat_User_InfoExample.java" />
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/entity/Wechat_User_Info.java" />
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/Wechat_User_InfoMapper.java" />
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/WechatUserInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3723">
+          <caret line="9" column="73" lean-forward="true" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+          <folding>
+            <marker date="1575873680345" expanded="true" signature="5936:6048" ph="select from wechat_user_info" />
+            <marker date="1575873680345" expanded="true" signature="6134:6200" ph="delete from wechat_user_info... " />
+            <marker date="1575873680345" expanded="true" signature="6330:6358" ph="delete from wechat_user_info... " />
+            <marker date="1575873680345" expanded="true" signature="6565:7916" ph="insert into wechat_user_info... " />
+            <marker date="1575873680345" expanded="true" signature="12814:12851" ph="select count... wechat_user_info" />
+            <marker date="1575873680345" expanded="true" signature="16492:18106" ph="update wechat_user_info... " />
+            <marker date="1575873680345" expanded="true" signature="18344:21193" ph="update wechat_user_info... " />
+            <marker date="1575873680345" expanded="true" signature="21319:22733" ph="update wechat_user_info... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Commom/src/main/java/com/pangu/foying/commom/entity/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/entity/WechatUserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="41" lean-forward="true" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/service/bizImpl/BaseNavigationBizImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3558">
+          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/service/bizImpl/ShiroServiceBizImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/entity/BaseSystemLogExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="9" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/entity/WechatUserInfoExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Commom/src/main/java/com/pangu/foying/commom/mapper/BaseEntityMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="46" column="38" lean-forward="false" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/entity/BaseAreaExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/entity/BaseItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="25" column="115" lean-forward="false" selection-start-line="25" selection-start-column="115" selection-end-line="25" selection-end-column="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/service/biz/BaseItemsBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/controller/BaseItemsDetailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="81" column="63" lean-forward="false" selection-start-line="81" selection-start-column="63" selection-end-line="81" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/service/biz/BaseItemsDetailBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/service/bizImpl/BaseItemsDetailBizImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="105" column="117" lean-forward="false" selection-start-line="105" selection-start-column="78" selection-end-line="105" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseOrganizeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="509" column="61" lean-forward="false" selection-start-line="509" selection-start-column="61" selection-end-line="509" selection-end-column="61" />
+          <folding>
+            <marker date="1575876877553" expanded="true" signature="5340:5449" ph="select from base_organize" />
+            <marker date="1575876877553" expanded="true" signature="5534:5597" ph="delete from base_organize... " />
+            <marker date="1575876877553" expanded="true" signature="5724:5749" ph="delete from base_organize... " />
+            <marker date="1575876877553" expanded="true" signature="5952:7022" ph="insert into base_organize... " />
+            <marker date="1575876877553" expanded="true" signature="10937:10971" ph="select count... base_organize" />
+            <marker date="1575876877553" expanded="true" signature="13903:15180" ph="update base_organize... " />
+            <marker date="1575876877553" expanded="true" signature="15414:17643" ph="update base_organize... " />
+            <marker date="1575876877553" expanded="true" signature="17766:18885" ph="update base_organize... " />
+            <marker date="1575876877553" expanded="true" signature="19074:19416" ph="SELECT disti... base_organize" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseManagerRoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+          <folding>
+            <marker date="1575872688319" expanded="true" signature="3541:3654" ph="select from base_manager_role" />
+            <marker date="1575872688319" expanded="true" signature="3739:3806" ph="delete from base_manager_role... " />
+            <marker date="1575872688319" expanded="true" signature="3936:3965" ph="delete from base_manager_role... " />
+            <marker date="1575872688319" expanded="true" signature="4171:4349" ph="insert into base_manager_role... " />
+            <marker date="1575872688319" expanded="true" signature="5252:5290" ph="select count... base_manager_role" />
+            <marker date="1575872688319" expanded="true" signature="6009:6198" ph="update base_manager_role... " />
+            <marker date="1575872688319" expanded="true" signature="6435:6731" ph="update base_manager_role... " />
+            <marker date="1575872688319" expanded="true" signature="6857:7028" ph="update base_manager_role... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseManagerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="479" column="61" lean-forward="false" selection-start-line="479" selection-start-column="61" selection-end-line="479" selection-end-column="61" />
+          <folding>
+            <marker date="1575876877545" expanded="true" signature="5159:5267" ph="select from base_manager" />
+            <marker date="1575876877545" expanded="true" signature="5352:5414" ph="delete from base_manager... " />
+            <marker date="1575876877545" expanded="true" signature="5540:5564" ph="delete from base_manager... " />
+            <marker date="1575876877545" expanded="true" signature="5766:6757" ph="insert into base_manager... " />
+            <marker date="1575876877545" expanded="true" signature="10377:10410" ph="select count... base_manager" />
+            <marker date="1575876877545" expanded="true" signature="13126:14296" ph="update base_manager... " />
+            <marker date="1575876877545" expanded="true" signature="14529:16570" ph="update base_manager... " />
+            <marker date="1575876877545" expanded="true" signature="16692:17718" ph="update base_manager... " />
+            <marker date="1575876877545" expanded="true" signature="17905:18246" ph="SELECT disti... base_manager" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseAreaMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="446" column="4" lean-forward="false" selection-start-line="446" selection-start-column="4" selection-end-line="447" selection-end-column="61" />
+          <folding>
+            <marker date="1575876877598" expanded="true" signature="4970:5075" ph="select from base_area" />
+            <marker date="1575876877598" expanded="true" signature="5160:5219" ph="delete from base_area... " />
+            <marker date="1575876877598" expanded="true" signature="5342:5363" ph="delete from base_area... " />
+            <marker date="1575876877598" expanded="true" signature="5562:6456" ph="insert into base_area... " />
+            <marker date="1575876877598" expanded="true" signature="9767:9797" ph="select count... base_area" />
+            <marker date="1575876877598" expanded="true" signature="12290:13349" ph="update base_area... " />
+            <marker date="1575876877598" expanded="true" signature="13579:15425" ph="update base_area... " />
+            <marker date="1575876877598" expanded="true" signature="15544:16473" ph="update base_area... " />
+            <marker date="1575876877598" expanded="true" signature="16654:16992" ph="SELECT * FRO... base_itemsdetail" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseNavigationRoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="190" column="11" lean-forward="false" selection-start-line="190" selection-start-column="11" selection-end-line="190" selection-end-column="11" />
+          <folding>
+            <marker date="1575877442472" expanded="true" signature="3559:3675" ph="select from base_navigation_role" />
+            <marker date="1575877442472" expanded="true" signature="3760:3830" ph="delete from base_navigation_role... " />
+            <marker date="1575877442472" expanded="true" signature="3963:3995" ph="delete from base_navigation_role... " />
+            <marker date="1575877442472" expanded="true" signature="4204:4391" ph="insert into base_navigation_role... " />
+            <marker date="1575877442472" expanded="true" signature="5315:5356" ph="select count... base_navigation_role" />
+            <marker date="1575877442472" expanded="true" signature="6087:6285" ph="update base_navigation_role... " />
+            <marker date="1575877442472" expanded="true" signature="6525:6833" ph="update base_navigation_role... " />
+            <marker date="1575877442472" expanded="true" signature="6962:7142" ph="update base_navigation_role... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/BaseAreaMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/BaseItemsDetailMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/BaseItemsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/BaseManagerMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/BaseManagerRoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/BaseNavigationMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="51" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/BaseNavigationRoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="53" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/BaseOrganizeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/BaseOrganizeRoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/BaseRoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/BaseSystemLogMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/mapper/WechatUserInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-811">
+          <caret line="45" column="13" lean-forward="false" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/controller/BaseItemsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="205" column="50" lean-forward="false" selection-start-line="205" selection-start-column="50" selection-end-line="205" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/service/bizImpl/BaseItemsBizImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="350" column="0" lean-forward="false" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/java/com/pangu/foying/web/project/admin/controller/BaseAreaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="36" column="53" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="42" lean-forward="false" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseSystemLogMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="437" column="14" lean-forward="false" selection-start-line="437" selection-start-column="14" selection-end-line="437" selection-end-column="14" />
+          <folding>
+            <marker date="1575877596079" expanded="true" signature="4924:5034" ph="select from base_systemlog" />
+            <marker date="1575877596079" expanded="true" signature="5119:5183" ph="delete from base_systemlog... " />
+            <marker date="1575877596079" expanded="true" signature="5311:5337" ph="delete from base_systemlog... " />
+            <marker date="1575877596079" expanded="true" signature="5541:6426" ph="insert into base_systemlog... " />
+            <marker date="1575877596079" expanded="true" signature="9650:9685" ph="select count... base_systemlog" />
+            <marker date="1575877596079" expanded="true" signature="12110:13146" ph="update base_systemlog... " />
+            <marker date="1575877596079" expanded="true" signature="13381:15173" ph="update base_systemlog... " />
+            <marker date="1575877596079" expanded="true" signature="15297:16210" ph="update base_systemlog... " />
+            <marker date="1575877596079" expanded="true" signature="17267:17610" ph="SELECT disti... base_systemlog" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseItemsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="420" column="2" lean-forward="false" selection-start-line="420" selection-start-column="2" selection-end-line="444" selection-end-column="11" />
+          <folding>
+            <marker date="1575880024755" expanded="true" signature="4883:4989" ph="select from base_items" />
+            <marker date="1575880024755" expanded="true" signature="5074:5134" ph="delete from base_items... " />
+            <marker date="1575880024755" expanded="true" signature="5258:5280" ph="delete from base_items... " />
+            <marker date="1575880024755" expanded="true" signature="5480:6331" ph="insert into base_items... " />
+            <marker date="1575880024755" expanded="true" signature="9491:9522" ph="select count... base_items" />
+            <marker date="1575880024755" expanded="true" signature="11902:12904" ph="update base_items... " />
+            <marker date="1575880024755" expanded="true" signature="13135:14882" ph="update base_items... " />
+            <marker date="1575880024755" expanded="true" signature="15002:15881" ph="update base_items... " />
+            <marker date="1575880024755" expanded="true" signature="16050:17079" ph="update Base_Items... " />
+            <marker date="1575880024755" expanded="true" signature="17278:17617" ph="SELECT disti... base_items" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseNavigationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="497" column="2" lean-forward="true" selection-start-line="497" selection-start-column="2" selection-end-line="522" selection-end-column="11" />
+          <folding>
+            <marker date="1575877063360" expanded="true" signature="5352:5463" ph="select from base_navigation" />
+            <marker date="1575877063360" expanded="true" signature="5548:5613" ph="delete from base_navigation... " />
+            <marker date="1575877063360" expanded="true" signature="5742:5769" ph="delete from base_navigation... " />
+            <marker date="1575877063360" expanded="true" signature="5974:7048" ph="insert into base_navigation... " />
+            <marker date="1575877063360" expanded="true" signature="10981:11017" ph="select count... base_navigation" />
+            <marker date="1575877063360" expanded="true" signature="13958:15239" ph="update base_navigation... " />
+            <marker date="1575877063360" expanded="true" signature="15475:17713" ph="update base_navigation... " />
+            <marker date="1575877063360" expanded="true" signature="17838:18961" ph="update base_navigation... " />
+            <marker date="1575877063360" expanded="true" signature="19986:20330" ph="SELECT disti... base_navigation" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseRoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="387" column="2" lean-forward="true" selection-start-line="387" selection-start-column="2" selection-end-line="394" selection-end-column="11" />
+          <folding>
+            <marker date="1575877504585" expanded="true" signature="4695:4800" ph="select from base_role" />
+            <marker date="1575877504585" expanded="true" signature="4885:4944" ph="delete from base_role... " />
+            <marker date="1575877504585" expanded="true" signature="5067:5088" ph="delete from base_role... " />
+            <marker date="1575877504585" expanded="true" signature="5287:6045" ph="insert into base_role... " />
+            <marker date="1575877504585" expanded="true" signature="8902:8932" ph="select count... base_role" />
+            <marker date="1575877504585" expanded="true" signature="11092:11987" ph="update base_role... " />
+            <marker date="1575877504585" expanded="true" signature="12217:13772" ph="update base_role... " />
+            <marker date="1575877504585" expanded="true" signature="13891:14677" ph="update base_role... " />
+            <marker date="1575877504585" expanded="true" signature="15175:15513" ph="SELECT disti... base_role" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/mybatis/mapper/admin/BaseItemsDetailMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-838">
+          <caret line="409" column="36" lean-forward="false" selection-start-line="409" selection-start-column="36" selection-end-line="409" selection-end-column="36" />
+          <folding>
+            <marker date="1575881659497" expanded="true" signature="4818:4930" ph="select from base_itemsdetail" />
+            <marker date="1575881659497" expanded="true" signature="5015:5081" ph="delete from base_itemsdetail... " />
+            <marker date="1575881659497" expanded="true" signature="5211:5239" ph="delete from base_itemsdetail... " />
+            <marker date="1575881659497" expanded="true" signature="5445:6250" ph="insert into base_itemsdetail... " />
+            <marker date="1575881659497" expanded="true" signature="9282:9319" ph="select count... base_itemsdetail" />
+            <marker date="1575881659497" expanded="true" signature="11598:12554" ph="update base_itemsdetail... " />
+            <marker date="1575881659497" expanded="true" signature="12791:14451" ph="update base_itemsdetail... " />
+            <marker date="1575881659497" expanded="true" signature="14577:15417" ph="update base_itemsdetail... " />
+            <marker date="1575881659497" expanded="true" signature="15978:16416" ph="select from Base_Items" />
+            <marker date="1575881659497" expanded="true" signature="18125:19108" ph="update Base_ItemsDetail... " />
+            <marker date="1575881659497" expanded="true" signature="19318:19676" ph="SELECT disti... base_itemsdetail" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-646">
+          <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoYing-Web/src/main/resources/application-druid.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
